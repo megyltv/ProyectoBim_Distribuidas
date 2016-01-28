@@ -46,7 +46,7 @@ public class Mithread extends Thread {
                 System.out.println(inputLine);
                 //out.println(inputLine);
                 String aviso= monitoreoVolcan(inputLine, a);
-                System.out.println(aviso);
+                //System.out.println(aviso);
                 out.println(aviso);
             }
             
@@ -72,10 +72,10 @@ public class Mithread extends Thread {
         
         dist= new Distancia();
         distancia = dist.distanciaDesde(lat1, long1, lat2, long2);
-        System.out.println(distancia+"\n");
+        //System.out.println(distancia+"\n");
         
         pd=new PeligroDistancia();
-        result=pd.estadoDistancia(distancia, valor);
+        result=pd.estadoDistancia(distancia, 4);
         
         return result;
     }

@@ -35,7 +35,7 @@ public class Mithread extends Thread{
             while ((inputLine = in.readLine()) != null) {
                 //System.out.println(inputLine); //coordenadas
                 
-                String hostName = "172.30.25.233";
+                String hostName = "172.30.24.73";
                 int portNumber = 8001;
                 try (
                     Socket echoSocket = new Socket(hostName, portNumber);
@@ -57,6 +57,7 @@ public class Mithread extends Thread{
                     System.exit(1);
                 } 
             }
+            //System.out.println("echo: " + in.readLine());
         } catch (IOException ex) {
             Logger.getLogger(Mithread.class.getName()).log(Level.SEVERE, null, ex);
         } finally {

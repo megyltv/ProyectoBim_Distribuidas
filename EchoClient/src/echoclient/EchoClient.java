@@ -21,7 +21,7 @@ public static void main(String[] args) throws IOException {
             System.exit(1);
         }*/
  
-        String hostName = "172.30.26.55";
+        String hostName = "172.30.24.73";
         int portNumber = 8000;
  	//String hostName = args[0];
         //int portNumber = Integer.parseInt(args[1]);
