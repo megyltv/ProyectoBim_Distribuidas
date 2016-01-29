@@ -10,9 +10,9 @@ import java.util.Random;
 public class Simulador extends Thread {
     double valor=1;
     int i=1;
-    double max=0.2, min=-0.1;
+    double max=0.02, min=-0.01;
     double aux;
-        
+    
     Random rand= new Random();
     
     @Override
@@ -26,7 +26,9 @@ public class Simulador extends Thread {
     }
     
     public int getValor(){
-        return (int)valor;
+        System.out.println(valor%10);
+        return (int)(valor%10);
+        
     }
     
 }

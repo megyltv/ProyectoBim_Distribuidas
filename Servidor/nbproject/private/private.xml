@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/megan/Documentos/Distribuidas/ProyectoBimestral/ProyectoBim_Distribuidas/Servidor/src/servidor/Mithread.java</file>
-            <file>file:/home/megan/Documentos/Distribuidas/ProyectoBimestral/ProyectoBim_Distribuidas/Servidor/src/servidor/PeligroDistancia.java</file>
             <file>file:/home/megan/Documentos/Distribuidas/ProyectoBimestral/ProyectoBim_Distribuidas/Servidor/src/Probe/probe.java</file>
-            <file>file:/home/megan/Documentos/Distribuidas/ProyectoBimestral/ProyectoBim_Distribuidas/Servidor/src/servidor/Conexion.java</file>
+            <file>file:/home/megan/Documentos/Distribuidas/ProyectoBimestral/ProyectoBim_Distribuidas/Servidor/src/servidor/Servidor.java</file>
+            <file>file:/home/megan/Documentos/Distribuidas/ProyectoBimestral/ProyectoBim_Distribuidas/Servidor/src/servidor/Simulador.java</file>
         </group>
     </open-files>
 </project-private>

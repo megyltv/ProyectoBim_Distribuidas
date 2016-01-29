@@ -10,8 +10,11 @@ import java.lang.Thread;
  * @author megan
  */
 public class Servidor {
+    
+    private static Simulador sim;
+    
     public static void main(String[] args) throws IOException {
-        /*private static*/ Simulador sim;
+        
         sim=new Simulador();
         sim.start();
         

@@ -27,7 +27,7 @@ public class probe {
 			String line = "", line2 = "";
 	
 			while ((line = b.readLine()) != null) {
-  				fw.write(line.substring(44,61));
+  				fw.write(line.substring(44,48));
   		
 			}
 			while ((line2 = b2.readLine()) != null){

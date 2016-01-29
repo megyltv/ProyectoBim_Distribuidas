@@ -35,7 +35,7 @@ public class Mithread extends Thread{
             while ((inputLine = in.readLine()) != null) {
                 //System.out.println(inputLine); //coordenadas
                 
-                String hostName = "172.30.24.73";
+                String hostName = "192.168.1.9";
                 int portNumber = 8001;
                 try (
                     Socket echoSocket = new Socket(hostName, portNumber);
@@ -50,7 +50,10 @@ public class Mithread extends Thread{
                 ) {
                     String userInput =inputLine;
                     out1.println(userInput);
-                    //System.out.println("echo: " + userInput);
+                    System.out.println(in1.readLine());
+                    
+                    //userInput=in1.readLine();
+                    out.println(in1.readLine());
                 } catch (IOException e) {
                     System.err.println("Couldn't get I/O for the connection to " +
                         hostName);
