@@ -1,4 +1,9 @@
-package servidor;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package servidor2;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -7,10 +12,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author megan
- */
+
 public class PeligroDistancia {
     protected final Connection con;
     String cadSQL;
@@ -51,7 +53,7 @@ public class PeligroDistancia {
                     System.out.println("estado distancia "+ ex);
                 }
                 
-                //System.out.println(result[0]);
+                System.out.println(result[0]);
             }
                 else{
                     if(distancia>15 && distancia<=40){
@@ -65,7 +67,7 @@ public class PeligroDistancia {
                         } catch (SQLException ex) {
                             System.out.println("estado distancia "+ ex);
                         }
-                        //System.out.println(result[0]);
+                        System.out.println(result[0]);
                     }
                     else{
                         cadSQL= "select pminimo from estado where escala = "+valor;
@@ -78,7 +80,7 @@ public class PeligroDistancia {
                         } catch (SQLException ex) {
                             System.out.println("estado distancia "+ ex);
                         }
-                        //System.out.println(result[0]);
+                        System.out.println(result[0]);
                     }
                 }
             }  

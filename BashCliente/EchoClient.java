@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package echoclient;
 import java.io.*;
 import java.net.*;
 /**
@@ -21,6 +15,7 @@ public static void main(String[] args) throws IOException {
             System.exit(1);
         }*/
  
+ 
         String hostName = "172.30.36.184";
         int portNumber = 8000;
  	//String hostName = args[0];
@@ -37,6 +32,7 @@ public static void main(String[] args) throws IOException {
                 new BufferedReader(
                     new InputStreamReader(System.in))
         ) {
+            
             String userInput=gps.coordenadas();
             out.println(userInput);
             System.out.println(in.readLine());

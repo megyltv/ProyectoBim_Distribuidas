@@ -18,8 +18,11 @@ import java.util.logging.Logger;
 public class Mithread extends Thread{
     Socket clientSocket;
     String inputLine;
-    int idThread;
-    //probeA probeI = new probeA();
+    int idThread, aux;
+    float cmdUptimeS1, cmdUptimeS2;
+    int cmdFreeS1, cmdFreeS2;
+;
+    
     
     public Mithread(Socket client){
         clientSocket=client;
@@ -35,7 +38,7 @@ public class Mithread extends Thread{
             while ((inputLine = in.readLine()) != null) {
                 //System.out.println(inputLine); //coordenadas
                 
-                String hostName = "192.168.1.9";
+                String hostName = "172.30.24.227";
                 int portNumber = 8001;
                 try (
                     Socket echoSocket = new Socket(hostName, portNumber);
@@ -50,10 +53,20 @@ public class Mithread extends Thread{
                 ) {
                     String userInput =inputLine;
                     out1.println(userInput);
-                    System.out.println(in1.readLine());
+                    //System.out.println(in1.readLine());
                     
-                    //userInput=in1.readLine();
-                    out.println(in1.readLine());
+                    String str = in1.readLine();
+                    String[] parametros=str.split("\t");
+                    
+                    //System.out.println(str);
+                    out.println(parametros[0].trim());
+                    cmdUptimeS1=Float.parseFloat(parametros[1].trim());
+                    cmdFreeS1=Integer.parseInt(parametros[2].trim());
+                    
+                    
+                    //System.out.println("\n"+parametros[0]);
+                    
+                    
                 } catch (IOException e) {
                     System.err.println("Couldn't get I/O for the connection to " +
                         hostName);
