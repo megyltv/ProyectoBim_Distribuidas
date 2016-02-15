@@ -38,7 +38,7 @@ public class Mithread extends Thread{
             while ((inputLine = in.readLine()) != null) {
                 //System.out.println(inputLine); //coordenadas
                 
-                String hostName = "172.30.24.227";
+                String hostName = "172.30.96.76";
                 int portNumber = 8001;
                 try (
                     Socket echoSocket = new Socket(hostName, portNumber);
@@ -60,8 +60,8 @@ public class Mithread extends Thread{
                     
                     //System.out.println(str);
                     out.println(parametros[0].trim());
-                    cmdUptimeS1=Float.parseFloat(parametros[1].trim());
-                    cmdFreeS1=Integer.parseInt(parametros[2].trim());
+                    //cmdUptimeS1=Float.parseFloat(parametros[1].trim());
+                    //cmdFreeS1=Integer.parseInt(parametros[2].trim());
                     
                     
                     //System.out.println("\n"+parametros[0]);
