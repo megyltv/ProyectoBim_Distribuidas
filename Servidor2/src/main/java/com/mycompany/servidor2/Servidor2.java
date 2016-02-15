@@ -3,26 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package balanceador;
+package com.mycompany.servidor2;
 
-/**
- *
- * @author megan
- */
 import java.net.*;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.lang.Thread;
 
-public class Balanceador {
-    public static void main(String[] args) throws IOException {
+public class Servidor2 {
 
+    private static Simulador sim;
     
-    int portNumber = 8000;
-    int i,j=1;
-      
-    try        
+    public static void main(String[] args) throws IOException {
+        
+        sim=new Simulador();
+        sim.start();
+        
+        int portNumber = 8002;
+        int i,j=1;
+        
+        try        
         {
-            ServerSocket serverSocket = new ServerSocket(8000);
+            ServerSocket serverSocket = new ServerSocket(8002);
             ArrayList<Socket> clientS=new ArrayList<Socket> ();
             ArrayList<Thread> threads=new ArrayList<Thread> ();
             
@@ -30,7 +34,7 @@ public class Balanceador {
                 Socket clientSocket = serverSocket.accept();
                 clientS.add(clientSocket);
             
-                Thread t1 = new Thread(new Mithread(clientSocket));
+                Thread t1 = new Thread(new Mithread(clientSocket, sim));
                 threads.add(t1);
                 t1.start();
                 j++;
@@ -44,4 +48,6 @@ public class Balanceador {
             System.out.println(e.getMessage());
         }
     }
+   
 }
+
